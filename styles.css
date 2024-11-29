@@ -1,0 +1,232 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Wrapper for layout */
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Allows content to adjust to smaller screens */
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: sticky;
+    top: 0;
+    height: 150vh;  /* To change this value for sidebar height adjustment with the content  */
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.sidebar-header p {
+    font-size: 0.9em;
+    color: #b2bec3;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav li a:hover {
+    background-color: #34495e;
+}
+
+/* Main Content Styling */
+.content {
+    flex-grow: 1;
+    padding: 20px 40px;
+    background-color: #f4f4f9;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.content h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.content p, .content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.content ul {
+    list-style-type: disc;
+}
+
+.content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* New styles for the Publications section */
+.publication-section {
+    margin-bottom: 30px;
+}
+
+.publication-section h3 {
+    font-size: 1.2em; /* Smaller size for sub-headings */
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.publication-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.publication-section ul li {
+    font-size: 0.9em;
+    word-break: break-word; /* Ensures long words or URLs break */
+    overflow-wrap: break-word;
+    white-space: normal; /* Allows text to wrap to the next line */
+    margin-bottom: 10px; /* Spacing between entries */
+    line-height: 1.4; /* Improves readability for long entries */
+}
+
+
+.publication-section a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.publication-section a:hover {
+    text-decoration: underline;
+}
+
+/* Prevent long words from overflowing */
+.publication-section ul li a {
+    word-wrap: break-word; /* Wraps long URLs or texts */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .sidebar-header h1 {
+        font-size: 1.5em;
+    }
+    .nav li {
+        margin: 10px 0;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between text and image */
+    margin-bottom: 30px; /* Add some space below the section */
+}
+
+.intro-text {
+    flex: 2; /* Allows the text to take more space than the image */
+}
+
+.intro-text p {
+    margin: 0; /* Ensure no extra space around the paragraph */
+    text-align: justify; /* Optional: For a neat, justified text alignment */
+}
+
+.intro-image {
+    flex: 1; /* Makes the image container smaller than the text */
+    text-align: center;
+}
+
+.intro-image img {
+    width: 200px; /* Set a smaller width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+
+}
+
+
+
+
+
+
+
+
